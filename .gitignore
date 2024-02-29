@@ -1,0 +1,57 @@
+# Dependency directories
+node_modules
+
+# Nest.js build directory
+/dist/
+
+# Nest.js debug logs
+/logs/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+
+# IDE configuration files
+.idea/
+.vscode/
+
+# React project gitignore
+
+# Production build directory
+/build/
+
+# Development build directory
+/.cache/
+/.npm/
+
+# IDE configuration files
+.idea/
+.vscode/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.pem

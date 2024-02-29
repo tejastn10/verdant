@@ -1,0 +1,22 @@
+ignorePatterns:
+  - "apps/**"
+  - "packages/**"
+extends:
+  - "@repo/eslint-config/library.js"
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: true
+rules:
+  # General Best Practices
+  eqeqeq: error # Require the use of === and !==
+  no-unused-vars: error # Disallow unused variables
+  no-implicit-coercion: error # Disallow shorthand type conversions
+  consistent-return: error # Require return statements to either always or never specify values
+  # Stylistic Issues
+  semi: error # Require semicolons at the end of statements
+  quotes: [error, "double"] # Enforce the consistent use of double quotes
+  indent: [error, 2] # Enforce consistent indentation
+  # TypeScript-specific rules
+  "@typescript-eslint/explicit-module-boundary-types": error # Require explicit return and parameter types on functions and class methods
+  "@typescript-eslint/no-explicit-any": error # Disallow the use of the 'any' type
+  "@typescript-eslint/no-unused-vars": error # Disallow unused variables
