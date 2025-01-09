@@ -1,74 +1,91 @@
-# Turborepo template starter with NPM
+# Verdant 🍃
 
-This is a starter turborepo for React front-end and Nestjs back-end.
+![Node.js Version](https://img.shields.io/badge/Node.js-22%2B-339933?logo=nodedotjs&logoColor=white)
+![Turborepo](https://img.shields.io/badge/Monorepo-Turborepo-007ACC?logo=turborepo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5%2B-007ACC?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19%2B-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6%2B-646CFF?logo=vite&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-10+-E0234E?logo=nestjs&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white)
 
-## What's inside?
+**Verdant** is a starter template for a modern full-stack monorepo built with [Turborepo](https://turbo.build/repo). It includes a React client (powered by Vite) and a NestJS server, with shared configurations for TypeScript, ESLint, Prettier, and more.
 
-This turborepo uses [NPM](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+---
 
-### Apps and Packages
+## Features 🌟
 
-- `client`: React app made with vite
-- `server`: Nestjs server
-- `eslint-config`: `eslint` & `react` configurations
-- `typescript-config`: `base.json`s used throughout the monorepo
+- **Monorepo Setup**: Shared code, configurations, and dependencies between apps.
+- **React Frontend**: Built with [Vite](https://vitejs.dev/) for fast development.
+- **NestJS Backend**: Robust backend using [NestJS](https://nestjs.com/).
+- **Centralized Configurations**:
+  - TypeScript configurations shared across all apps.
+  - Custom ESLint and Prettier configurations.
+- **Code Quality**: Pre-configured with [Husky](https://typicode.github.io/husky/) and [CommitLint](https://commitlint.js.org/).
+- **Caching and Performance**: Built-in support for Turborepo’s local and remote caching.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+---
 
-### Utilities
+## Getting Started 🚀
 
-This turborepo has some additional tools already setup for you:
+### Prerequisites
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-- [Husky](https://typicode.github.io/husky/) for code formatting
-- [CommitLint](https://commitlint.js.org/) for commit messages formatting
+Ensure you have the following installed:
 
-### Build
+- **Node.js**: v22 or later.
+- **NPM**: Installed alongside Node.js.
 
-To build all apps and packages, run the following command:
+---
+
+### Installation ⚙️
+
+1. Clone the repository:  
+
+   ```bash
+   git clone https://github.com/tejastn10/verdant.git
+   cd verdant
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at `http://localhost:3000` to see Verdant in action.
+
+---
+
+### Project Structure 📂
 
 ```bash
-cd mint
-npm run build
+verdant/
+├── apps/                  # Applications within the monorepo
+│   ├── client/            # React front-end application
+│   ├── server/            # NestJS back-end application
+├── packages/              # Shared packages and configurations
+│   ├── eslint-config/     # Shared ESLint configuration
+│   ├── typescript-config/ # Shared TypeScript configurations
+├── turbo.json             # Turborepo configuration file
+├── package.json           # Monorepo dependencies and scripts
+├── tsconfig.json          # Base TypeScript configuration
+└── README.md              # Project documentation
 ```
 
-### Develop
+---
 
-To develop all apps and packages, run the following command:
+## License 📜
 
-```bash
-cd mint
-npm run dev
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Remote Caching
+---
 
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## Acknowledgments 🙌
 
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```bash
-cd mint
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```bash
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/features/pipelines)
-- [Caching](https://turborepo.org/docs/features/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/features/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+- Built with **Turborepo** for blazing-fast development workflows.
+- Inspired by the simplicity of **Verdant**, symbolizing freshness and efficiency.
+- Made with ❤️ for developers who love clean and scalable codebases.
