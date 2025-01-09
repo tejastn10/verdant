@@ -19,6 +19,7 @@ const eslintConfig = [
 		ignores: [
 			"**/node_modules",
 			"**/.next",
+			"**/vite.config.ts",
 			"**/.DS_Store",
 			"**/dist",
 			"**/dist-ssr",
