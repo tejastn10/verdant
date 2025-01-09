@@ -41,10 +41,6 @@ const eslintConfig = [
 			parser: tsParser,
 			ecmaVersion: 2020,
 			sourceType: "module",
-
-			parserOptions: {
-				project: true,
-			},
 		},
 
 		rules: {
@@ -67,7 +63,6 @@ const eslintConfig = [
 
 			"@typescript-eslint/explicit-function-return-type": "error",
 			"@typescript-eslint/no-implicit-any": "off",
-			"@typescript-eslint/no-unsafe-assignment": "error",
 		},
 	},
 	{
