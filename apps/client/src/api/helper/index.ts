@@ -90,7 +90,8 @@ const getRequestConfig = (
 	};
 
 	// Prepend version to baseURL if provided
-	config.baseURL = `${axiosRequestConfig.baseURL}${version}`;
+	// config.baseURL = `${axiosRequestConfig.baseURL}${version}`;
+	config.baseURL = `${axiosRequestConfig.baseURL}`;
 
 	return config;
 };
@@ -219,4 +220,6 @@ export {
 
 	// ? Types
 	URLVersions,
+	type AxiosResponse,
+	type AxiosError,
 };
