@@ -1,16 +1,30 @@
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "./app.module";
-
+import { Logger, ValidationPipe } from "@nestjs/common";
 import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
-import { Logger } from "@nestjs/common";
+
+import { CorsOptions, NestOptions, ValidationPipeOptions } from "./options";
+
+import { AppModule } from "./app.module";
 
 const bootstrap = async (): Promise<void> => {
 	const FastifyModule = new FastifyAdapter();
 
+	// Enabling things for Fastify server
+	FastifyModule.enableCors(CorsOptions);
+
+	const app = await NestFactory.create<NestFastifyApplication>(
+		AppModule,
+		FastifyModule,
+		NestOptions
+	);
+
+	// Middlewares & Pipes
+	app.useGlobalPipes(new ValidationPipe(ValidationPipeOptions));
+
+	// Config implementation
 	const PORT = 5000;
 	const MODE = "development";
 
-	const app = await NestFactory.create<NestFastifyApplication>(AppModule, FastifyModule);
 	await app.listen(
 		{
 			port: PORT,
