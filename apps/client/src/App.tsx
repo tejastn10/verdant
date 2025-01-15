@@ -1,10 +1,26 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+import { GET, URLVersions, AxiosResponse } from "./api/helper";
+
 const App: FC = () => {
 	const [count, setCount] = useState(0);
+
+	const server = async (): Promise<void> => {
+		try {
+			const response = await GET({ url: "/", version: URLVersions.V1 });
+			console.log("Server response:", (response as AxiosResponse).data);
+		} catch (error) {
+			console.error(`Failed to get server response: ${error}`);
+		}
+	};
+
+	useEffect(() => {
+		server();
+	}, []);
 
 	return (
 		<>
