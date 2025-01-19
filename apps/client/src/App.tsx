@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 
+import nestjsLogo from "./assets/nestjs.svg";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -30,6 +31,9 @@ const App: FC = () => {
 				</a>
 				<a href="https://react.dev" target="_blank">
 					<img src={reactLogo} className="logo react" alt="React logo" />
+				</a>
+				<a href="https://nestjs.com/" target="_blank">
+					<img src={nestjsLogo} className="logo nest" alt="NestJS logo" />
 				</a>
 			</div>
 			<h1>Vite + React + Nest</h1>
