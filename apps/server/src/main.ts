@@ -2,6 +2,8 @@ import { NestFactory } from "@nestjs/core";
 import { Logger, ValidationPipe } from "@nestjs/common";
 import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
 
+import { ExceptionInterceptor } from "./interceptors/exception.interceptor";
+
 import { CorsOptions, NestOptions, ValidationPipeOptions } from "./options";
 
 import { AppModule } from "./app.module";
@@ -18,8 +20,9 @@ const bootstrap = async (): Promise<void> => {
 		NestOptions
 	);
 
-	// Middlewares & Pipes
+	// Middlewares, Interceptors & Pipes
 	app.useGlobalPipes(new ValidationPipe(ValidationPipeOptions));
+	app.useGlobalInterceptors(new ExceptionInterceptor());
 
 	// Config implementation
 	const PORT = 5000;
