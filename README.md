@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" alt="Logo">
+</p>
+
 # Verdant 🍃
 
 ![Node.js Version](https://img.shields.io/badge/Node.js-22%2B-339933?logo=nodedotjs&logoColor=white)
