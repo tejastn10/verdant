@@ -13,13 +13,13 @@
 		"@commitlint/cli": "^19.8.0",
 		"@commitlint/config-conventional": "^19.8.0",
 		"@eslint/eslintrc": "^3.3.1",
-		"@eslint/js": "^9.25.0",
+		"@eslint/js": "^9.25.1",
 		"globals": "^16.0.0",
 		"husky": "^9.1.7",
 		"jest": "^29.7.0",
 		"lint-staged": "^15.5.1",
 		"prettier": "^3.5.3",
-		"turbo": "^2.5.0"
+		"turbo": "^2.5.2"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
