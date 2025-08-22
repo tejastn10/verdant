@@ -13,13 +13,13 @@
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@eslint/eslintrc": "^3.3.1",
-		"@eslint/js": "^9.31.0",
+		"@eslint/js": "^9.33.0",
 		"globals": "^16.3.0",
 		"husky": "^9.1.7",
 		"jest": "^30.0.5",
-		"lint-staged": "^16.1.2",
+		"lint-staged": "^16.1.5",
 		"prettier": "^3.6.2",
-		"turbo": "^2.5.5"
+		"turbo": "^2.5.6"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
@@ -35,7 +35,7 @@
 	"engines": {
 		"node": ">=22"
 	},
-	"packageManager": "npm@11.4.2",
+	"packageManager": "npm@11.5.2",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
