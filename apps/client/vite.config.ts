@@ -18,7 +18,7 @@ export default defineConfig(({ command }) => {
 			// Resolve configuration
 			resolve: {
 				alias: {
-					"@": path.resolve(__dirname, "src"), // Shorten the import path for src directory
+					"@": path.resolve(import.meta.dirname, "src"), // Shorten the import path for src directory
 				},
 			},
 			// ? Uncomment this for local development or add localhost to CORS options
@@ -39,7 +39,7 @@ export default defineConfig(({ command }) => {
 				sourcemap: false, // You can change to true if you need sourcemaps in production
 				rollupOptions: {
 					input: {
-						main: path.resolve(__dirname, "index.html"),
+						main: path.resolve(import.meta.dirname, "index.html"),
 					},
 					output: {
 						chunkFileNames: "assets/js/[name]-[hash].js",
@@ -51,7 +51,7 @@ export default defineConfig(({ command }) => {
 			plugins: [react()],
 			resolve: {
 				alias: {
-					"@": path.resolve(__dirname, "src"),
+					"@": path.resolve(import.meta.dirname, "src"),
 				},
 			},
 		};
